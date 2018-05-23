@@ -32,7 +32,10 @@ static void do_ioctl(char* inf, int sock)
 	bzero(&ifr, sizeof(ifr));
 	snprintf(ifr.ifr_name, sizeof(ifr.ifr_name), "%s", inf);
 
-	/* Standard kernel ioctl options */
+	/* Standard kernel ioctl options. 
+	Check available options with linux command: 
+		ethtool -T <interface>
+	Modify below options accordingly. */
 	hwc.flags = 0;
 	hwc.tx_type = HWTSTAMP_TX_ON;
 	hwc.rx_filter = HWTSTAMP_FILTER_ALL;
