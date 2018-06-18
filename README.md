@@ -1,4 +1,4 @@
-# network_latency_measurement
+# Network Latency Measurement
 
 This tool supports accurate round trip time (RTT) and one-way delay measurement based on software/hardware timestamping. The tool is developed and tested under Linux kernel 4.4.114 with Mellanox ConnectX-4 NIC support. 
   - For software timestamping (default: software=1), there are ~10s of microseconds error (dominated by software delay). 
